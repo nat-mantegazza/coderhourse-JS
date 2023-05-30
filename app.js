@@ -72,6 +72,7 @@ while (continuar === true) {
     }
 }
 */
+//clase constructora
 class Cursos {
     constructor (curso, precio){
         this.curso = curso;
@@ -79,12 +80,13 @@ class Cursos {
     }
 }
 
+//array
 let precios = [
     {curso: "Desarrollo Web", precio: "$20000"}, 
     {curso: "Javascript", precio: "$25000"},
     {curso: "ReactJS", precio: "$28000"},
     {curso: "Front End Developer", precio: "$73000"},
-    {curso: "Back End Developer", precio "$80000"},
+    {curso: "Back End Developer", precio: "$80000"}
 ]
 
 //funcion para saludar
@@ -107,9 +109,26 @@ function elegirEdad() {
 
 //funcion para cargar productos al carrito
 function cargarProductos() {
-    let curso = prompt("Ingrese el nombre de uno de nuestros cursos: \n 1. Desarrollo Web ($20000 más IVA) \n 2. Javascript ($25000 más IVA) \n 3. React JS ($28000 más IVA) \n 4. Front End Developer: incluye Desarrollo Web + Javascript + React JS ($73000 más IVA) \n 5. Back End Developer ($80000 más IVA)");
+    let curso = prompt("Ingrese el nombre de uno de nuestros cursos: \n 1. Desarrollo Web ($20000) \n 2. Javascript ($25000) \n 3. React JS ($28000) \n 4. Front End Developer: incluye Desarrollo Web + Javascript + React JS ($73000) \n 5. Back End Developer ($80000)");
     //creación del nuevo objeto
     const nuevoCurso = new Cursos (curso)
     arraycarrito.push(nuevoCurso)
     alert("Curso añadido al carrito");
 }
+
+//funcion para ver carrito
+function verCarrito() {
+    arrayCarrito.forEach((producto)=>{ 
+        alert(`Usted eligió ${producto.curso} por un monto de ${producto.precio}`);
+    })  
+}
+
+//funcion para ver cursos Front End Path
+function verFrontEndPath() {
+    const frontEndPath = precios.filter ((front)=> front.precio <= 73000)
+for (const cursosFront of frontEndPath) {
+    alert(`Los cursos dentro del camino Front End son ${cursosFront.curso} por un monto de ${cursosFront.precio}`);
+}
+}
+
+let arrayCarrito = []
