@@ -71,91 +71,88 @@ while (continuar === true) {
         alert("Opción no válida. Intente nuevamente.");
     }
 }
+
 */
-//clase constructora
+
 class Cursos {
-    constructor (curso, precio){
-        this.curso = curso;
-        this.precio = precio;
+constructor(curso, precio) {
+    this.curso = curso;
+    this.precio = precio;
     }
 }
 
-//array
 let precios = [
-    {curso: "Desarrollo Web", precio: "20000"}, 
-    {curso: "Javascript", precio: "25000"},
-    {curso: "ReactJS", precio: "28000"},
-    {curso: "Front End Developer", precio: "73000"},
-    {curso: "Back End Developer", precio: "80000"}
-]
+    { curso: "Desarrollo Web", precio: 20000 },
+    { curso: "Javascript", precio: 25000 },
+    { curso: "ReactJS", precio: 28000 },
+    { curso: "Front End Developer", precio: 73000 },
+    { curso: "Back End Developer", precio: 80000 },
+];
 
-//funcion para saludar
 function saludar() {
     let nombre = prompt("Ingrese su nombre");
     alert("Bienvenido/a " + nombre + " a CoderNaty cursos!");
 }
 
-//funcion para elegir edad
 function elegirEdad() {
-    edad = parseInt(prompt("Ingrese su edad:"));
+    let edad = parseInt(prompt("Ingrese su edad:"));
 
-    if(edad >= 18) {
+    if (edad >= 18) {
         alert("Usuario autorizado.");
     } else {
-        alert("Usuario no autorizado. Los cursos de CoderNaty son solo para alumnos mayores de edad.");
-        elegirEdad();
+        alert(
+        "Usuario no autorizado. Los cursos de CoderNaty son solo para alumnos mayores de edad."
+        );
+    elegirEdad();
     }
 }
 
-//funcion para cargar productos al carrito
 function cargarProducto() {
-    let curso = prompt("Ingrese el nombre de uno de nuestros cursos: \n 1. Desarrollo Web ($20000) \n 2. Javascript ($25000) \n 3. React JS ($28000) \n 4. Front End Developer: incluye Desarrollo Web + Javascript + React JS ($73000) \n 5. Back End Developer ($80000)");
-    let precio = prompt("Ingrese el precio del curso: \n 1. Desarrollo Web ($20000) \n 2. Javascript ($25000) \n 3. React JS ($28000) \n 4. Front End Developer: incluye Desarrollo Web + Javascript + React JS ($73000) \n 5. Back End Developer ($80000)");
-    //creación del nuevo objeto
-    const nuevoCurso = new Cursos (curso, precio)
-    arrayCarrito.push(nuevoCurso)
-    alert("Curso añadido al carrito");
+    let curso = prompt(
+    "Ingrese el nombre de uno de nuestros cursos (sensible a mayúsculas):\n 1. Desarrollo Web ($20000)\n 2. Javascript ($25000)\n 3. React JS ($28000)\n 4. Front End Developer: incluye Desarrollo Web + Javascript + React JS ($73000)\n 5. Back End Developer ($80000)"
+    );
+    let precio = precios.find((item) => item.curso === curso)?.precio;
+    if (precio) {
+        const nuevoCurso = new Cursos(curso, precio);
+        arrayCarrito.push(nuevoCurso);
+        alert("Curso añadido al carrito");
+    } else {
+    alert("Curso inválido");
+    }
 }
 
-//funcion para ver carrito
 function verCarrito() {
-    arrayCarrito.forEach((producto)=>{ 
+    arrayCarrito.forEach((producto) => {
         alert(`Usted eligió ${producto.curso} por un monto de ${producto.precio}`);
-    })  
+    });
 }
 
-//funcion para ver cursos Front End Path
-function verFrontEndPath() {
-    const frontEndPath = precios.filter ((front)=> parseint(front.precio) <= 73000)
-for (const cursosFront of frontEndPath) {
-    alert(`Los cursos dentro del camino Front End son ${cursosFront.curso} por un monto de ${cursosFront.precio}`);
-}
-}
-
-//funcion finalizar compra
 function finalizarCompra() {
-    const total = arrayCarrito.reduce((acc, el)=> acc + el.precio, 0);
+    const total = arrayCarrito.reduce((acc, el) => acc + el.precio, 0);
     alert(`El total de su compra es ${total}`);
 }
 
 let arrayCarrito = [];
-let opcion = prompt("Ingrese una opción: \n 1. Cargar cursos \n 2. Mostrar cursos pertenecientes al Front End Path \n 3. Ver carrito \n 4.finalizar \n 5. Salir");
 
-//bucle
+saludar();
+elegirEdad();
 
-while (opcion !== "5") {
+let opcion = prompt(
+    "Ingrese una opción:\n 1. Cargar cursos\n 2. Ver carrito\n 3. Finalizar\n 4. Salir"
+);
+
+while (opcion !== "4") {
     if (opcion === "1") {
-        cargarProducto(arrayCarrito);
+        cargarProducto();
     }
     if (opcion === "2") {
-        verFrontEndPath();
-    }
-    if (opcion === "3") {
         verCarrito();
     }
-    if (opcion === "4") {
+    if (opcion === "3") {
         finalizarCompra();
     }
-    opcion = prompt("¿Qué desea hacer? \n 1. Seguir comprando 2. Mostrar cursos pertenecientes al Front End Path \n 3. Ver carrito \n 4.finalizar \n 5. Salir")
+    opcion = prompt(
+    "¿Qué desea hacer?\n 1. Seguir comprando\n 2. Ver carrito\n 3. Finalizar\n 4. Salir"
+    );
 }
 alert("Gracias por su compra");
