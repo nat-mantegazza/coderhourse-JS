@@ -3,7 +3,7 @@ class Cursos {
     constructor(curso, precio) {
         this.curso = curso;
         this.precio = precio;
-        }
+    }
     calcularPrecioConIVA () {
         const iva = 0.21;
         return this.precio * (1 + iva);
