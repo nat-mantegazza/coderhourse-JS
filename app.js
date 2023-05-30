@@ -108,7 +108,7 @@ function elegirEdad() {
 }
 
 //funcion para cargar productos al carrito
-function cargarProductos() {
+function cargarProducto() {
     let curso = prompt("Ingrese el nombre de uno de nuestros cursos: \n 1. Desarrollo Web ($20000) \n 2. Javascript ($25000) \n 3. React JS ($28000) \n 4. Front End Developer: incluye Desarrollo Web + Javascript + React JS ($73000) \n 5. Back End Developer ($80000)");
     //creación del nuevo objeto
     const nuevoCurso = new Cursos (curso)
@@ -131,4 +131,29 @@ for (const cursosFront of frontEndPath) {
 }
 }
 
+//funcion finalizar compra
+function finalizarCompra() {
+    const total = arrayCarrito.reduce((acc, el)=> acc + el.precio, 0);
+    alert(`El total de su compra es ${total}`);
+}
+
 let arrayCarrito = []
+let opcion = prompt("Ingrese una opción: \n 1. Cargar cursos \n 2. Mostrar cursos pertenecientes al Front End Path \n 3. Ver carrito \n 4.finalizar \n 5. Salir")
+
+//bucle
+
+while (opcion !== "5") {
+    if (opcion === "1") {
+        cargarProducto(arrayCarrito);
+    }
+    if (opcion === "2") {
+        verFrontEndPath();
+    }
+    if (opcion === "3") {
+        verCarrito();
+    }
+    if (opcion === "4") {
+        finalizarCompra();
+    }
+    opcion = prompt("¿Qué desea hacer? \n 1. Seguir comprando 2. Mostrar cursos pertenecientes al Front End Path \n 3. Ver carrito \n 4.finalizar \n 5. Salir")
+}
