@@ -82,11 +82,11 @@ constructor(curso, precio) {
 }
 
 let precios = [
-    { curso: "Desarrollo Web", precio: 20000 },
-    { curso: "Javascript", precio: 25000 },
-    { curso: "ReactJS", precio: 28000 },
-    { curso: "Front End Developer", precio: 73000 },
-    { curso: "Back End Developer", precio: 80000 },
+    {curso: "Desarrollo Web", precio: 20000},
+    {curso: "Javascript", precio: 25000},
+    {curso: "ReactJS", precio: 28000},
+    {curso: "Front End Developer", precio: 73000},
+    {curso: "Back End Developer", precio: 80000},
 ];
 
 function saludar() {
@@ -145,11 +145,14 @@ while (opcion !== "4") {
     if (opcion === "1") {
         cargarProducto();
     }
-    if (opcion === "2") {
+    else if (opcion === "2") {
         verCarrito();
     }
-    if (opcion === "3") {
+    else if (opcion === "3") {
         finalizarCompra();
+    }
+    else {
+        alert("Opción inválida.");
     }
     opcion = prompt(
     "¿Qué desea hacer?\n 1. Seguir comprando\n 2. Ver carrito\n 3. Finalizar\n 4. Salir"
