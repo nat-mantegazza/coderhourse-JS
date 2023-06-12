@@ -1,4 +1,4 @@
-//función constructora
+/* //función constructora
 class Cursos {
     constructor(curso, precio) {
         this.curso = curso;
@@ -97,3 +97,24 @@ while (opcion !== "4") {
     );
 }
 alert("Gracias por su compra");
+*/
+
+//CAPTURA DE ID
+const items = document.getElementById('items')
+const templateCard = document.getElementById('template-card')
+
+//JSON
+
+document.addEventListener('DOMContentLoaded', () => {
+    fetchData()
+})
+
+const fetchData = async () => {
+    try {
+        const res = await fetch('api.json')
+        const data = await res.json()
+        console.log(data)
+    } catch (error) {
+        console.log(error)
+    }
+}
