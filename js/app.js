@@ -90,8 +90,8 @@ function cargarProductos() {
                 <img src="${producto.imagen}" alt="${producto.titulo}" class="product-img">
                 <h2 class="product-title">${producto.titulo}</h2>
                 <p class="product-description">${producto.descripcion}</p>
-                <span class="price">$${producto.precio}</span>
                 <i class='bx bx-shopping-bag add-cart' id=${producto.id}></i>
+                <span class="price">$${producto.precio}</span>
             </div>
         `;
 

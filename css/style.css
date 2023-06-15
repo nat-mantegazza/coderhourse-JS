@@ -65,6 +65,9 @@ header {
     font-size: 2.4rem;
     cursor: pointer;
 }
+
+
+
 /*fin de nav*/
 /*fin de header*/
 
@@ -92,14 +95,33 @@ header {
     gap: 1.5rem;
     position: relative;
 }
+
 .product-box:hover{
     padding: 10px;
     border: 1px solid var(--text-color);
     transition: 0.4s;
 }
+
 .product-img {
     max-width: 100%;
     height: auto;
     margin-bottom: 0.5rem;
+}
+
+.product-title {
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    font-weight: 700;
+    float: right;
+    padding: 10px;
+}
+
+.add-cart {
+    background: var(--text-color);
+    color: var(--bg-color);
+    padding: 10px;
+    cursor: pointer;
 }
 
