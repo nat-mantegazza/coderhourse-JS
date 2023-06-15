@@ -86,7 +86,10 @@ header {
     gap: 1.5rem;
 }
 
-.product-box {
+.contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    gap: 1.5rem;
     position: relative;
 }
 .product-box:hover{
