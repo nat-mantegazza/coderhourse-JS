@@ -8,11 +8,11 @@
     box-sizing: border-box;
     list-style: none;
     text-decoration: none;
-    
+    font-family: 'DM Sans', sans-serif;
 }
 
 :root {
-    --main-color: rgb(4, 4, 85);
+    --main-color: rgb(239, 9, 224);
     --text-color: #fff;
     --bg-color: rgb(0, 0, 0);    
 }
@@ -23,6 +23,7 @@ img {
 
 body {
     color: var(--text-color);
+    background: var(--bg-color);
 }
 
 .container {
@@ -33,17 +34,16 @@ body {
 
 section {
     padding: 4rem 0 3rem;
+    
 }
 
 /*header*/
 header {
-    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background: var(--bg-color);
     box-shadow: 0 1px 4px hsl(0, 4%, 15% / 10%);
-    font-family: 'DM Sans', sans-serif;;
 }
 
 /*nav*/
@@ -71,8 +71,32 @@ header {
 .section-title {
     font-size: 1.5rem;
     font-weight: 400;
+    margin-bottom: 1.5rem;
 }
 
 .shop {
     margin-top: 2rem;
 }
+
+/*shop content*/
+
+.shop-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, auto));
+    gap: 1.5rem;
+}
+
+.product-box {
+    position: relative;
+}
+.product-box:hover{
+    padding: 10px;
+    border: 1px solid var(--text-color);
+    transition: 0.4s;
+}
+.product-img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+}
+
