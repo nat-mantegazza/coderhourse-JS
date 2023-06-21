@@ -149,8 +149,7 @@ header {
     color: var(--text-color);
 }
 
-.delete-btn,
-.buy-btn {
+.delete-btn {
     background-color: var(--main-color);
     color: var(--text-color);
     padding: 10px 20px;
@@ -158,6 +157,18 @@ header {
     border-radius: 5px;
     cursor: pointer;
     margin-top: 10px;
+}
+
+.buy-btn {
+    background-color: var(--main-color);
+    color: var(--text-color);
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 150px;
+    padding: 15px;
 }
 
 .delete-btn:hover,

@@ -144,7 +144,7 @@ const productos = [
   //Función para vaciar carrito
   function vaciarCarrito() {
     localStorage.clear();
-    cargarCarrito();
+    cargarCarrito();    
   }
   
   //función para calcular el total
