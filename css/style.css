@@ -12,7 +12,7 @@
 }
 
 :root {
-    --main-color: rgb(239, 9, 224);
+    --main-color: #551A8B; 
     --text-color: #fff;
     --bg-color: rgb(0, 0, 0);    
 }
@@ -34,7 +34,6 @@ body {
 
 section {
     padding: 4rem 0 3rem;
-    
 }
 
 /*header*/
@@ -46,11 +45,11 @@ header {
     box-shadow: 0 1px 4px hsl(0, 4%, 15% / 10%);
 }
 
-/*nav*/
+/*nav index*/
 .nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-between; 
     padding: 20px 0;
 }
 
@@ -61,15 +60,21 @@ header {
     font-style: italic;
 }
 
-#cart-icon { 
-    font-size: 2.4rem;
-    cursor: pointer;   
-    
+.cart-icon {
+    display: flex;
+    align-items: center;
+    margin:auto;
 }
 
+.cart-icon a {
+    display: flex;
+    align-items: center;
+}
 
-
-
+#cart-icon {
+    font-size: 2.4rem;
+    cursor: pointer;
+}
 /*fin de nav*/
 /*fin de header*/
 
@@ -84,7 +89,6 @@ header {
 }
 
 /*shop content*/
-
 .shop-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, auto));
@@ -126,4 +130,96 @@ header {
     padding: 10px;
     cursor: pointer;
 }
+/*fin de shop content*/
 
+/*carrito*/
+.contenedor-carrito {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+}
+
+.total-amount {
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--text-color);
+}
+
+.delete-btn,
+.buy-btn {
+    background-color: var(--main-color);
+    color: var(--text-color);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.delete-btn:hover,
+.buy-btn:hover {
+    background-color: var(--main-color);
+}
+
+.delete-btn {
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+
+/*
+.product-box {
+    display: flex;
+    align-items: center;
+}
+
+.product-title {
+    margin-right: auto;
+}
+
+.product-price {
+    margin-left: 10px;
+}
+*/
+/*fin de carrito*/
+
+/*footer*/
+.texto-footer {
+    display: flex;
+    justify-content: center;
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: var(--main-color);
+}
+/*fin footer*/
+
+/*media queries*/
+
+@media screen and (max-width: 480px) {
+    .section-title {
+        font-size: 1.2rem;
+    }
+    
+    .shop-content {
+        grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+    }
+    
+    .contenedor-productos {
+        grid-template-columns: repeat(auto-fit, minmax(150px, auto));
+    }
+    
+    .product-img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 0.5rem;
+    }
+    
+    .price {
+        font-size: 0.9rem;
+        padding: 5px;
+    }
+}
