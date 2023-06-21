@@ -61,10 +61,12 @@ header {
     font-style: italic;
 }
 
-#cart-icon {
+#cart-icon { 
     font-size: 2.4rem;
-    cursor: pointer;
+    cursor: pointer;   
+    
 }
+
 
 
 

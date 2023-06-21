@@ -1,4 +1,4 @@
-<!--HOla profe, hablamos por Zoom y me permitió dejar mi trabajo para corregir a lo último ya que lo estoy cambiando. Yo soy la alumna que tuvo fiebre y no lo pudo terminar. Gracias--> 
+<!--HOla profe, hablamos por Zoom y me permitiÃ³ dejar mi trabajo para corregir a lo Ãºltimo ya que lo estoy cambiando. Yo soy la alumna que tuvo fiebre y no lo pudo terminar. Gracias--> 
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,25 +11,30 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     
 </head>
-<body>
-    <header>
-        <!--navbar-->
-        <div class="nav container">
-            <a href="#" class="logo">CODERNATY</a>
-            <!--cart icon-->
-            <div class="cart-icon"><i class='bx bx-shopping-bag' id="cart-icon"></i></div>
-            <div class="whole-cart-window">
-                <h2>Carrito</h2>
-                <div class="cart-wrapper">
-
-                </div>
-                <div class="subtotal">Subtotal: $0.00</div>
-                <div class="checkout">Checkout</div>
-                <div class="ver-carrito">Ver carrito</div>
-            </div>
-            
+<header>
+    <!--navbar-->
+    <div class="nav container">
+        <a href="index.html" class="logo">CODERNATY</a>
+        <!--cart icon-->
+        <div class="cart-icon">             
+            <a href="pages/cart.html">
+                <i class='bx bx-shopping-bag' id="cart-icon"></i>          
+            </a>
         </div>
-    </header>
+        <div class="whole-cart-window">
+            <h2>Carrito</h2>
+            <div class="cart-wrapper">
+            </div>
+            <div class="ver-carrito">
+                <a href="pages/cart.html">Ver carrito</a>
+            </div>
+            <div class="checkout" ><i  id="vaciarCarrito" >
+                <a href="index.html" onclick="vaciarCarrito();">Vaciar Carrito</a>
+            </div>            
+        </div>        
+    </div>
+</header>
+<body>
     <!--shop-->
     <section class="shop container">
         <h2 class="section-title">Cursos</h2>
@@ -46,9 +51,12 @@
                 <p>Descripcion blablabla</p>
                 <span class ="price">$43500</span>
                 <i class='bx bx-shopping-bag add-cart'></i>-->    
-        
-
     </section>
-    <script src="./js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/app.js"></script>
+    <script>cargarProductos();</script>
 </body>
+<footer>
+    <p class="texto-footer">© 2023 CoderNaty</p>
+</footer>
 </html>

@@ -78,9 +78,10 @@ const productos = [
     }
 ];
 
+/*
 const contenedorProductos = document.querySelector("#contenedor-productos");
-
 function cargarProductos() {
+
     productos.forEach(producto => {
 
         const div = document.createElement("div");
@@ -100,4 +101,30 @@ function cargarProductos() {
 };
 
 cargarProductos();
+*/
+
+//Cargar productos en index.html
+
+function cargarProductos() {
+    const contenedorProductos = document.querySelector("#contenedor-productos");
+    productos.forEach(producto => {
+        const div = document.createElement("div");
+
+        div.classList.add("producto");
+
+        div.innerHTML = `
+            <div class="product-box">
+                <img src="${producto.imagen}" alt="${producto.titulo}" class="product-img">
+                <h2 class="product-title">${producto.titulo}</h2>
+                <p class="product-description">${producto.descripcion}</p>
+                <i class='bx bx-shopping-bag add-cart' id=${producto.titulo}></i>
+                <span class="price">$${producto.precio}</span>
+            </div>
+        `; 
+        contenedorProductos.append(div);
+    });
+}
+
+//funcion guardar productos
+function 
 
