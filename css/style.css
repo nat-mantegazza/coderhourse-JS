@@ -34,6 +34,7 @@ body {
 
 section {
     padding: 4rem 0 3rem;
+    
 }
 
 /*header*/
@@ -46,10 +47,11 @@ header {
 }
 
 /*nav index*/
+/* nav index */
 .nav {
     display: flex;
     align-items: center;
-    justify-content: space-between; 
+    justify-content: space-between; /* Align items evenly */
     padding: 20px 0;
 }
 
@@ -76,6 +78,7 @@ header {
     cursor: pointer;
 }
 /*fin de nav*/
+
 /*fin de header*/
 
 .section-title {
@@ -89,6 +92,7 @@ header {
 }
 
 /*shop content*/
+
 .shop-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, auto));
@@ -130,9 +134,8 @@ header {
     padding: 10px;
     cursor: pointer;
 }
-/*fin de shop content*/
 
-/*carrito*/
+/*carrito page */
 .contenedor-carrito {
     display: flex;
     flex-direction: column;
@@ -181,12 +184,11 @@ header {
     margin-left: 10px;
 }
 */
-/*fin de carrito*/
 
 /*footer*/
 .texto-footer {
     display: flex;
-    justify-content: center;
+    justify-content: center
 }
 footer {
     position: fixed;
