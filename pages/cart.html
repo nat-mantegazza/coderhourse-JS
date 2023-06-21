@@ -10,32 +10,33 @@
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     
 </head>
-<header>
-    <!--navbar-->
-    <div class="nav container">
-        <a href="../index.html" class="logo">CODERNATY</a>
-        <!--cart icon-->
-        <div class="cart-icon">             
-            <a href="../pages/cart.html">
-                <i class='bx bx-shopping-bag' id="cart-icon"></i>          
-            </a>
-        </div>
-        <div class="whole-cart-window">
-            <h2>Carrito</h2>
-            <div class="cart-wrapper">
-
-            </div>            
-            <div class="ver-carrito">
-                <a href="../pages/cart.html">Ver carrito</a>
-            </div>
-            <div class="checkout" ><i  id="vaciarCarrito" >
-                <a href="../index.html" onclick="vaciarCarrito();">Vaciar Carrito</a>
-            </div>
-        </div>
-        
-    </div>
-</header>
 <body>
+    <header>
+        <!--navbar-->
+        <div class="nav container">
+            <a href="../index.html" class="logo">CODERNATY</a>
+            <!--cart icon-->
+            <div class="cart-icon">             
+                <a href="../pages/cart.html">
+                    <i class='bx bx-shopping-bag' id="cart-icon"></i>          
+                </a>
+            </div>
+            <div class="whole-cart-window">
+                <h2>Carrito</h2>
+                <div class="cart-wrapper">
+
+                </div>            
+                <div class="ver-carrito">
+                    <a href="../pages/cart.html">Ver carrito</a>
+                </div>
+                <div class="checkout" ><i  id="vaciarCarrito" >
+                    <a href="../index.html" onclick="vaciarCarrito();">Vaciar Carrito</a>
+                </div>
+            </div>
+            
+        </div>
+    </header>
+
     <!--el shop-->
     <section class="shop container">
         <h2 class="section-title">Carrito</h2>
@@ -44,12 +45,12 @@
             </div>
         </div>
     </section>
-    <script src="../js/app.js"></script>
+    <footer>
+        <p class="texto-footer">© 2023 CoderNaty</p>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js/app.js"></script>
     <script>cargarCarrito();</script>
-    
 </body>
-<footer>
-    <p class="texto-footer">© 2023 CoderNaty</p>
-</footer>
 </html>
