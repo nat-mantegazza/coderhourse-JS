@@ -85,6 +85,7 @@ const productos = [
     },
   ];
   
+  //funcion para cargar productos al html
   function cargarProductos() {
     const contenedorProductos = document.querySelector("#contenedor-productos");
     productos.forEach((producto) => {
@@ -97,7 +98,7 @@ const productos = [
             <img src="${producto.imagen}" alt="${producto.titulo}" class="product-img">
             <h2 class="product-title">${producto.titulo}</h2>
             <p class="product-description">${producto.descripcion}</p>
-            <i class="bx bx-shopping-bag add-cart" onclick="saveProduct('${producto.titulo}')"></i>
+            <i class="bx bx-shopping-bag add-cart" onclick="guardarProduct('${producto.titulo}')"></i>
             <span class="price">$${producto.precio}</span>
         </div>
       `;
@@ -106,7 +107,8 @@ const productos = [
     });
   }
   
-  function saveProduct(id) {
+  //funcion para guardar productos
+  function guardarProduct(id) {
     const idCart = id;
     let precioCart = 0;
   
@@ -139,13 +141,14 @@ const productos = [
     cargarCarrito();
   }
   
+  //Función para vaciar carrito
   function vaciarCarrito() {
     localStorage.clear();
     cargarCarrito();
   }
   
-  
-  function calculateTotal() {
+  //función para calcular el total
+  function calcularTotal() {
     const storedItems = JSON.parse(localStorage.getItem("listaagregados")) || [];
     let total = 0;
   
@@ -159,6 +162,7 @@ const productos = [
     return total;
   }
   
+  //funcion para cargar el carrito
   function cargarCarrito() {
     const contenedorCarrito = document.querySelector("#contenedor-carrito");
     contenedorCarrito.innerHTML = ""; 
@@ -193,7 +197,7 @@ const productos = [
   
       const totalAmount = document.createElement("div");
       totalAmount.classList.add("total-amount");
-      totalAmount.textContent = `Total: $${calculateTotal()}`;
+      totalAmount.textContent = `Total: $${calcularTotal()}`;
   
       contenedorCarrito.appendChild(totalAmount);
   
@@ -222,7 +226,7 @@ const productos = [
     }
   }
   
-  
+  //funcion para borrar productos
   function deleteProduct(id) {
     Swal.fire({
       title: '¿Estás seguro?',
@@ -248,6 +252,7 @@ const productos = [
     });
   }
   
+  //funcnion para realizar compra
   function realizarCompra() {
     
     localStorage.clear();
