@@ -3,9 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CoderNaty carrito</title>
+    <title>CoderNaty</title>
+    <!--link css-->
+    <link rel="stylesheet" href="../css/style.css">
+    <!--link boxicons-->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
 </head>
+<header>
+    <!--navbar-->
+    <div class="nav container">
+        <a href="../index.html" class="logo">CODERNATY</a>
+        <!--cart icon-->
+        <div class="cart-icon">             
+            <a href="../pages/cart.html">
+                <i class='bx bx-shopping-bag' id="cart-icon"></i>          
+            </a>
+        </div>
+        <div class="whole-cart-window">
+            <h2>Carrito</h2>
+            <div class="cart-wrapper">
+
+            </div>            
+            <div class="ver-carrito">
+                <a href="../pages/cart.html">Ver carrito</a>
+            </div>
+            <div class="checkout" ><i  id="vaciarCarrito" >
+                <a href="../index.html" onclick="vaciarCarrito();">Vaciar Carrito</a>
+            </div>
+        </div>
+        
+    </div>
+</header>
 <body>
+    <!--el shop-->
+    <section class="shop container">
+        <h2 class="section-title">Carrito</h2>
+        <div class = "shop-content">
+            <div id="contenedor-carrito" class="contenedor-carrito">              
+            </div>
+        </div>
+    </section>
+    <script src="../js/app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>cargarCarrito();</script>
     
 </body>
+<footer>
+    <p class="texto-footer">© 2023 CoderNaty</p>
+</footer>
 </html>
