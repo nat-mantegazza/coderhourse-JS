@@ -161,7 +161,7 @@ const productos = [
   
   function cargarCarrito() {
     const contenedorCarrito = document.querySelector("#contenedor-carrito");
-    contenedorCarrito.innerHTML = ""; // Clear the previous cart items before displaying the updated ones
+    contenedorCarrito.innerHTML = ""; 
   
     if (localStorage.length > 0) {
       const almacenados = JSON.parse(localStorage.getItem("listaagregados"));
@@ -249,7 +249,7 @@ const productos = [
   }
   
   function realizarCompra() {
-    // Process the purchase...
+    
     localStorage.clear();
   
     Swal.fire({
