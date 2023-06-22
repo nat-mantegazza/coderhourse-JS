@@ -113,8 +113,9 @@ header {
 
 .product-box:hover{
     padding: 10px;
-    border: 1px solid var(--text-color);
+    border: 1px solid var(--main-color);
     transition: 0.4s;
+    border-radius: 15px;
 }
 
 .product-img {
@@ -131,6 +132,7 @@ header {
     font-weight: 700;
     float: right;
     padding: 10px;
+    color: var(--main-color);
 }
 
 .add-cart {
