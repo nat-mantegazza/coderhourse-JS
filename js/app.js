@@ -16,7 +16,7 @@ const productos = [
       titulo: "Javascript",
       imagen: "img/icon-1.JPG",
       descripcion:
-        "Al graduarte, estarás en condiciones de crear soluciones web interactivas, y trasladar los conocimientos del curso a cualquier framework JavaScript",
+        "Al graduarte, estarás en condiciones de crear soluciones web interactivas, y trasladar los conocimientos del curso a cualquier framework JavaScript.",
       categoria: {
         nombre: "Front End Path",
         id: "front",
@@ -76,7 +76,7 @@ const productos = [
       titulo: "Programación Backend",
       imagen: "./img/icon-1.JPG",
       descripcion:
-        "En este curso aprenderás a desarrollar aplicaciones modernas con Node.js y MongoDB. Programarás en Javascript del lado del servidor aplicando técnicas asincrónicas",
+        "En este curso aprenderás a desarrollar aplicaciones modernas con Node.js y MongoDB. Programarás en Javascript del lado del servidor aplicando técnicas asincrónicas.",
       categoria: {
         nombre: "Back End Path",
         id: "back",
@@ -126,7 +126,9 @@ const productos = [
       Swal.fire({
         title: "¡Producto ya agregado al carrito!",
         icon: "warning",
-        confirmButtonText: "OK"
+        confirmButtonText: "OK",
+        backdrop: true,
+        confirmButtonColor: "#551A8B"
       });
     } else {
       const newItem = { id: idCart, precio: precioCart };
@@ -135,7 +137,9 @@ const productos = [
       Swal.fire({
         title: "¡Producto agregado al carrito correctamente!",
         icon: "success",
-        confirmButtonText: "OK"
+        confirmButtonText: "OK",
+        backdrop: true,
+        confirmButtonColor: "#551A8B"
       });
     }
     cargarCarrito();
@@ -234,7 +238,7 @@ const productos = [
       text: 'Se eliminará el producto del carrito',
       icon: 'warning',
       showCancelButton: true,
-      confirmButtonColor: '#3085d6',
+      confirmButtonColor: '#551A8B',
       cancelButtonColor: '#d33',
       confirmButtonText: 'Sí, eliminar',
       cancelButtonText: 'Cancelar'
@@ -251,7 +255,9 @@ const productos = [
         Swal.fire({
           title: 'Producto eliminado',
           icon: 'success',
-          confirmButtonText: 'OK'
+          confirmButtonText: 'OK',
+          backdrop: true,
+          confirmButtonColor: '#551A8B'
         });
       }
     });
@@ -263,9 +269,11 @@ const productos = [
     localStorage.clear();
   
     Swal.fire({
-      title: "Felicitaciones! Compra realizada exitosamente. Recibirás un mail de confirmación.",
-      icon: "success",
-      confirmButtonText: "OK"
+      title: 'Felicitaciones! Compra realizada exitosamente. Recibirás un mail de confirmación.',
+      icon: 'success',
+      confirmButtonText: 'OK',
+      backdrop: true,
+      confirmButtonColor: '#551A8B'
     });
   
     cargarCarrito();

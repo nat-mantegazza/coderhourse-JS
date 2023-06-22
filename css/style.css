@@ -140,6 +140,7 @@ header {
     color: var(--text-color);
     padding: 10px;
     cursor: pointer;
+    border-radius: 5px;
 }
 
 /*carrito page */
