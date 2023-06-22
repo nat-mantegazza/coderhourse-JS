@@ -223,6 +223,7 @@ const productos = [
       productBox.appendChild(productTitle);
       div.appendChild(productBox);
       contenedorCarrito.appendChild(div);
+      
     }
   }
   
@@ -242,7 +243,11 @@ const productos = [
         const almacenados = JSON.parse(localStorage.getItem('listaagregados'));
         const filtered = almacenados.filter((obj) => obj.id !== id);
         localStorage.setItem('listaagregados', JSON.stringify(filtered));
+        if (almacenados.length == 1) {
+          localStorage.clear();
+        }
         cargarCarrito();
+
         Swal.fire({
           title: 'Producto eliminado',
           icon: 'success',
