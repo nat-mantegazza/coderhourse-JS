@@ -56,6 +56,7 @@ header {
     align-items: center;
     justify-content: space-between; 
     padding: 20px 0;
+    font-size: 18px;
 }
 
 .logo {
@@ -161,10 +162,15 @@ header {
     background-color: var(--main-color);
     color: var(--text-color);
     padding: 10px 20px;
+    margin-top: 10px; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px;
+}
+
+.contenedor-carrito .delete-btn {
+    margin-right: 10px;
+    margin-bottom: 15px;
 }
 
 .buy-btn, 
@@ -188,10 +194,7 @@ header {
     background-color: var(--main-color);
 }
 
-.delete-btn {
-    margin-right: 10px;
-    margin-bottom: 15px;
-}
+
 
 /*footer*/
 .texto-footer {
