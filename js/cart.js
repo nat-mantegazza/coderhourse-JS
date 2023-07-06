@@ -67,8 +67,8 @@ function cargarCarrito() {
         contenedorCarrito.appendChild(comprarBtn);
 
         const seguirBtn = document.createElement("button");
-        seguirBtn.textContent = "Seguir Comprando";
-        seguirBtn.classList.add("buy-btn");
+        seguirBtn.textContent = "Seguir comprando";
+        seguirBtn.classList.add("seguir-btn");
         seguirBtn.addEventListener("click", () => {
             window.location.href = "../index.html";
         });
@@ -99,7 +99,7 @@ function deleteProduct(id) {
         text: 'Se eliminará el producto del carrito',
         icon: 'warning',
         showCancelButton: true,
-        confirmButtonColor: '#551A8B',
+        confirmButtonColor: '#926db4',
         cancelButtonColor: '#d33',
         confirmButtonText: 'Sí, eliminar',
         cancelButtonText: 'Cancelar'
@@ -118,7 +118,7 @@ function deleteProduct(id) {
                 icon: 'success',
                 confirmButtonText: 'OK',
                 backdrop: true,
-                confirmButtonColor: '#551A8B'
+                confirmButtonColor: '#926db4'
             });
         }
     });
@@ -134,7 +134,7 @@ function realizarCompra() {
         icon: 'success',
         confirmButtonText: 'OK',
         backdrop: true,
-        confirmButtonColor: '#551A8B'
+        confirmButtonColor: '#926db4'
     });
 
     cargarCarrito();

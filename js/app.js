@@ -44,7 +44,7 @@ function guardarProduct(id) {
       icon: "warning",
       confirmButtonText: "OK",
       backdrop: true,
-      confirmButtonColor: "#551A8B"
+      confirmButtonColor: "#926db4"
     });
   } else {
     const newItem = { id: idCart, precio: precioCart };
@@ -55,7 +55,7 @@ function guardarProduct(id) {
       icon: "success",
       confirmButtonText: "OK",
       backdrop: true,
-      confirmButtonColor: "#551A8B"
+      confirmButtonColor: "#926db4"
     });
   }
   cargarCarrito();

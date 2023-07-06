@@ -12,7 +12,7 @@
 }
 
 :root {
-    --main-color: #551A8B; 
+    --main-color: #926db4; 
     --text-color: #fff;
     --bg-color: rgb(0, 0, 0);    
 }
@@ -148,6 +148,7 @@ header {
     display: flex;
     flex-direction: column;
     text-transform: uppercase;
+    align-items: left;
 }
 
 .total-amount {
@@ -167,7 +168,8 @@ header {
     margin-top: 10px;
 }
 
-.buy-btn {
+.buy-btn, 
+.seguir-btn {
     background-color: var(--main-color);
     color: var(--text-color);
     font-size: 18px;
@@ -177,7 +179,10 @@ header {
     margin-top: 10px;
     width: 150px;
     padding: 15px;
+    text-transform: uppercase;
 }
+
+
 
 .delete-btn:hover,
 .buy-btn:hover {
@@ -188,21 +193,6 @@ header {
     margin-right: 10px;
     margin-bottom: 15px;
 }
-
-/*
-.product-box {
-    display: flex;
-    align-items: center;
-}
-
-.product-title {
-    margin-right: auto;
-}
-
-.product-price {
-    margin-left: 10px;
-}
-*/
 
 /*footer*/
 .texto-footer {
