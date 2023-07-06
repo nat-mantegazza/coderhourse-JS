@@ -147,7 +147,6 @@ header {
 .contenedor-carrito {
     display: flex;
     flex-direction: column;
-    text-transform: uppercase;
     align-items: left;
 }
 

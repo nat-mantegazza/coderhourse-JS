@@ -83,7 +83,7 @@ function cargarCarrito() {
 
         const productTitle = document.createElement("h2");
         productTitle.classList.add("product-title");
-        productTitle.textContent = "No hay productos en el carrito";
+        productTitle.textContent = "No hay productos en el carrito. Haz click en CODERNATY para volver a sitio principal.";
 
         productBox.appendChild(productTitle);
         div.appendChild(productBox);
