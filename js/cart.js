@@ -83,11 +83,20 @@ function cargarCarrito() {
 
         const productTitle = document.createElement("h2");
         productTitle.classList.add("product-title");
-        productTitle.textContent = "No hay productos en el carrito. Haz click en CODERNATY para volver a sitio principal.";
+        productTitle.textContent = "No hay productos en el carrito.";
 
         productBox.appendChild(productTitle);
         div.appendChild(productBox);
         contenedorCarrito.appendChild(div);
+
+        const seguirBtn = document.createElement("button");
+        seguirBtn.textContent = "Página principal";
+        seguirBtn.classList.add("seguir-btn");
+        seguirBtn.addEventListener("click", () => {
+            window.location.href = "../index.html";
+        });
+
+        contenedorCarrito.appendChild(seguirBtn);
 
     }
 }
