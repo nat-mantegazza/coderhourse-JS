@@ -223,9 +223,9 @@ footer {
 /*media queries*/
 
 @media screen and (max-width: 480px) {
-    /*.section-title {
+    .section-title {
         font-size: 1.4rem;
-    }*/
+    }
     
     .shop-content {
         grid-template-columns: repeat(auto-fit, minmax(150px, auto));
