@@ -61,7 +61,7 @@ header {
 }
 
 .logo {
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     color: var(--text-color);
     font-weight: 700;
     font-style: italic;
@@ -186,6 +186,7 @@ header {
 
 .buy-btn {
     text-transform: uppercase;
+    font-weight: 700;
 }
 
 .seguir-btn {
