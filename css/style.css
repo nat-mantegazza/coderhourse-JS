@@ -34,6 +34,7 @@ body {
     max-width: 1068px;
     margin: auto;
     width: 100%;
+    padding: 20px 0px 60px;
 }
 
 section {
@@ -81,10 +82,7 @@ header {
     font-size: 2.4rem;
     cursor: pointer;
 }
-
-
 /*fin de nav*/
-
 /*fin de header*/
 
 .section-title {
@@ -156,21 +154,17 @@ header {
     font-size: 1.2rem;
     font-weight: bold;
     color: var(--main-color);
+    text-transform: uppercase;
 }
 
 .delete-btn {
     background-color: var(--main-color);
     color: var(--text-color);
     padding: 10px 20px;
-    margin-top: 10px; 
     border: none;
     border-radius: 5px;
     cursor: pointer;
-}
-
-.contenedor-carrito .delete-btn {
-    margin-right: 10px;
-    margin-bottom: 15px;
+    margin-top: 10px;
 }
 
 .buy-btn, 
@@ -181,12 +175,19 @@ header {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    margin-top: 10px;
+    margin-top: 20px;
     width: 150px;
     padding: 15px;
+}
+
+.buy-btn {
     text-transform: uppercase;
 }
 
+.seguir-btn {
+    width: 100%;
+    margin-bottom: 15px;
+}
 
 
 .delete-btn:hover,
@@ -194,7 +195,10 @@ header {
     background-color: var(--main-color);
 }
 
-
+.delete-btn {
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
 
 /*footer*/
 .texto-footer {
