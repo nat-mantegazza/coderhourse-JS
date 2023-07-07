@@ -127,6 +127,10 @@ header {
     margin-bottom: 0.5rem;
 }
 
+.product-description {
+    margin-bottom: 8px;
+}
+
 .price {
     font-weight: 700;
     float: right;
