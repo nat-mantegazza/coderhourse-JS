@@ -99,7 +99,7 @@ function deleteProduct(id) {
         text: 'Se eliminará el producto del carrito',
         icon: 'warning',
         showCancelButton: true,
-        confirmButtonColor: '#926db4',
+        confirmButtonColor: '#a384c1',
         cancelButtonColor: '#d33',
         confirmButtonText: 'Sí, eliminar',
         cancelButtonText: 'Cancelar'
@@ -118,7 +118,7 @@ function deleteProduct(id) {
                 icon: 'success',
                 confirmButtonText: 'OK',
                 backdrop: true,
-                confirmButtonColor: '#926db4'
+                confirmButtonColor: '#a384c1'
             });
         }
     });
@@ -134,7 +134,7 @@ function realizarCompra() {
         icon: 'success',
         confirmButtonText: 'OK',
         backdrop: true,
-        confirmButtonColor: '#926db4'
+        confirmButtonColor: '#a384c1'
     });
 
     cargarCarrito();
