@@ -58,6 +58,6 @@ function guardarProduct(id) {
       confirmButtonColor: "#a384c1"
     });
   }
-  cargarCarrito();
+  /*cargarCarrito();*/
   });
 }
